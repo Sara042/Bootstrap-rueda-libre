@@ -2,58 +2,231 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Flota</title>
-    <link rel="Stylensheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEj5v5LD0F0KnK4Z8TZ/j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ideas para rodar | Rueda Libre</title>
+    <!-- CDN CSS de Bootstrap 5.3.8 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
 </head>
 <body>
-<header class="bg-dark text-white py-3">
-  <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
-    <a class="text-white fw-bold" href="../index.html">Rueda Libre</a>
-    <nav aria-label="Secciones de la página">
-      <ul class="d-flex flex-wrap justify-content-center gap-3 list-unstyled m-0">
-        <li><a class="text-white" href="#catalogo">Experiencias</a></li>
-        <li><a class="text-white" href="#beneficios">Beneficios</a></li>
-        <li><a class="text-white" href="#consulta">Consulta</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-  <main id="contenido" class="container py-5">
-    <h1 class="mb-4">Ideas para tu próxima salida</h1>
-    <section class="row g-4 align-items-center mb-5" aria-labelledby="portada-titulo">
-  <div class="col-12 col-md-6">
-    <h2 id="portada-titulo">Encuentra tu próximo plan</h2>
-    <p class="lead">Ciudad, caminos y nuevas formas de disfrutar la bicicleta.</p>
-    <a href="#catalogo" class="d-inline-block p-2 bg-warning text-dark rounded">Ver experiencias</a>
-  </div>
-  <div class="col-12 col-md-6">
-    <img src="../img/gravel.jpg" class="img-fluid rounded-3" loading="lazy"
-      alt="Ciclista recorriendo un camino de grava entre campos">
-  </div>
-</section>
-    <section id="catalogo" class="mb-5" aria-labelledby="catalogo-titulo">
-      <h2 id="catalogo-titulo" class="mb-4">Elige una experiencia</h2>
-      <div class="row g-4">
-        <!-- Inserta aquí las siete columnas del paso 7. -->
-         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-  <article class="h-100 d-flex flex-column gap-2 p-3 border rounded-3">
-    <img src="../img/urbana.jpg" class="img-fluid rounded" loading="lazy"
-      alt="Bicicleta urbana turquesa junto a una pared de ladrillo">
-    <h3 class="fs-5">Primer paseo urbano</h3>
-    <p class="mb-0">Una salida tranquila para ganar confianza sobre la bicicleta.</p>
-    <p class="fw-semibold text-success">Ritmo suave</p>
-    <a href="#consulta" class="mt-auto align-self-start text-dark bg-warning p-2 rounded">
-      Explorar esta opción
-    </a>
-  </article>
-</div>
-      </div>
-    </section>
-    <!-- Añade aquí beneficios, llamada a la acción, tabla y consulta, en ese orden. -->
-  </main>
-  <!-- Inserta aquí el pie del paso 13. -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1E4N7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- 13. ENCABEZADO -->
+    <header class="bg-dark text-white py-3">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+            <a class="text-white fw-bold text-decoration-none" href="../index.html">Rueda Libre</a>
+            <nav aria-label="Secciones de la página">
+                <ul class="d-flex flex-wrap justify-content-center gap-3 list-unstyled m-0">
+                    <li><a class="text-white text-decoration-none" href="#catalogo">Experiencias</a></li>
+                    <li><a class="text-white text-decoration-none" href="#beneficios">Beneficios</a></li>
+                    <li><a class="text-white text-decoration-none" href="#consulta">Consulta</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido" class="container py-5">
+        <h1 class="mb-4">Ideas para tu próxima salida</h1>
+
+        <!-- 12. PORTADA EN DOS COLUMNAS -->
+        <section class="row g-4 align-items-center mb-5" aria-labelledby="portada-titulo">
+            <div class="col-12 col-md-6">
+                <h2 id="portada-titulo">Encuentra tu próximo plan</h2>
+                <p class="lead">Ciudad, caminos y nuevas formas de disfrutar la bicicleta.</p>
+                <a href="#catalogo" class="d-inline-block p-2 bg-warning text-dark rounded text-decoration-none">Ver experiencias</a>
+            </div>
+            <div class="col-12 col-md-6">
+                <img src="../img/gravel.jpg" class="img-fluid rounded-3" loading="lazy" alt="Ciclista recorriendo un camino de grava entre campos">
+            </div>
+        </section>
+
+        <!-- 04, 07. CATÁLOGO DE PROPUESTAS (7 PROPUESTAS CON GRILLA) -->
+        <section id="catalogo" class="mb-5" aria-labelledby="catalogo-titulo">
+            <h2 id="catalogo-titulo" class="mb-4">Elige una experiencia</h2>
+            <div class="row g-4">
+                
+                <!-- Propuesta 1 -->
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="h-100 d-flex flex-column gap-2 p-3 border rounded-3">
+                        <img src="../img/urbana.jpg" class="img-fluid rounded" loading="lazy" alt="Bicicleta urbana turquesa">
+                        <h3 class="fs-5">Primer paseo urbano</h3>
+                        <p class="mb-0">Una salida tranquila para ganar confianza sobre la bicicleta.</p>
+                        <p class="fw-semibold text-success">Ritmo suave</p>
+                        <a href="#consulta" class="mt-auto align-self-start text-dark bg-warning p-2 rounded text-decoration-none">Explorar esta opción</a>
+                    </article>
+                </div>
+
+                <!-- Propuesta 2 -->
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="h-100 d-flex flex-column gap-2 p-3 border rounded-3">
+                        <img src="../img/plegable.jpg" class="img-fluid rounded" loading="lazy" alt="Bicicleta plegable">
+                        <h3 class="fs-5">Viaja ligero</h3>
+                        <p class="mb-0">Ideal para combinar trayectos en transporte público.</p>
+                        <p class="fw-semibold text-success">Práctico y ágil</p>
+                        <a href="#consulta" class="mt-auto align-self-start text-dark bg-warning p-2 rounded text-decoration-none">Explorar esta opción</a>
+                    </article>
+                </div>
+
+                <!-- Propuesta 3 -->
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="h-100 d-flex flex-column gap-2 p-3 border rounded-3">
+                        <img src="../img/montana.jpg" class="img-fluid rounded" loading="lazy" alt="Bicicleta de montaña">
+                        <h3 class="fs-5">Entre árboles</h3>
+                        <p class="mb-0">Rutas de contacto directo con la naturaleza y aire libre.</p>
+                        <p class="fw-semibold text-success">Aventura moderada</p>
+                        <a href="#consulta" class="mt-auto align-self-start text-dark bg-warning p-2 rounded text-decoration-none">Explorar esta opción</a>
+                    </article>
+                </div>
+
+                <!-- Propuesta 4 -->
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="h-100 d-flex flex-column gap-2 p-3 border rounded-3">
+                        <img src="../img/gravel.jpg" class="img-fluid rounded" loading="lazy" alt="Bicicleta de grava">
+                        <h3 class="fs-5">Camino de grava</h3>
+                        <p class="mb-0">Para quienes buscan extender sus límites fuera del pavimento.</p>
+                        <p class="fw-semibold text-success">Intermedio</p>
+                        <a href="#consulta" class="mt-auto align-self-start text-dark bg-warning p-2 rounded text-decoration-none">Explorar esta opción</a>
+                    </article>
+                </div>
+
+                <!-- Propuesta 5 -->
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="h-100 d-flex flex-column gap-2 p-3 border rounded-3">
+                        <img src="../img/electrica.jpg" class="img-fluid rounded" loading="lazy" alt="Bicicleta eléctrica">
+                        <h3 class="fs-5">Un impulso extra</h3>
+                        <p class="mb-0">Tecnología de asistencia para escalar sin agotarte.</p>
+                        <p class="fw-semibold text-success">Asistido</p>
+                        <a href="#consulta" class="mt-auto align-self-start text-dark bg-warning p-2 rounded text-decoration-none">Explorar esta opción</a>
+                    </article>
+                </div>
+
+                <!-- Propuesta 6 -->
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="h-100 d-flex flex-column gap-2 p-3 border rounded-3">
+                        <img src="../img/infantil.jpg" class="img-fluid rounded" loading="lazy" alt="Bicicleta infantil">
+                        <h3 class="fs-5">Pequeñas primeras vueltas</h3>
+                        <p class="mb-0">Espacios seguros diseñados para los más jóvenes.</p>
+                        <p class="fw-semibold text-success">Familiar</p>
+                        <a href="#consulta" class="mt-auto align-self-start text-dark bg-warning p-2 rounded text-decoration-none">Explorar esta opción</a>
+                    </article>
+                </div>
+
+                <!-- Propuesta 7 -->
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="h-100 d-flex flex-column gap-2 p-3 border rounded-3">
+                        <img src="../img/tandem.jpg" class="img-fluid rounded" loading="lazy" alt="Bicicleta tándem">
+                        <h3 class="fs-5">Pedalear de a dos</h3>
+                        <p class="mb-0">Una experiencia sincronizada y muy divertida en pareja.</p>
+                        <p class="fw-semibold text-success">En compañía</p>
+                        <a href="#consulta" class="mt-auto align-self-start text-dark bg-warning p-2 rounded text-decoration-none">Explorar esta opción</a>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 09. CUATRO BENEFICIOS -->
+        <section id="beneficios" class="py-5 mb-4" aria-labelledby="beneficios-titulo">
+            <h2 id="beneficios-titulo" class="text-center mb-4">¿Por qué Rueda Libre?</h2>
+            <div class="row g-4">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <h3 class="fs-5 fw-bold">Bicicletas revisadas</h3>
+                    <p class="mb-1">Revisamos cada bicicleta antes de entregarla.</p>
+                    <p class="fw-semibold text-success">En cada alquiler</p>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <h3 class="fs-5 fw-bold">Equipo incluido</h3>
+                    <p class="mb-1">Sales con casco y candado.</p>
+                    <p class="fw-semibold text-success">Sin costo adicional</p>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <h3 class="fs-5 fw-bold">Opciones para explorar</h3>
+                    <p class="mb-1">Compara distintos tipos de salida.</p>
+                    <p class="fw-semibold text-success">Según tus preferencias</p>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <h3 class="fs-5 fw-bold">Distintos ritmos</h3>
+                    <p class="mb-1">Encuentra una experiencia adecuada para tu compañía.</p>
+                    <p class="fw-semibold text-success">Paseo, aventura o ritmo</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. LLAMADA A LA ACCIÓN -->
+        <section class="p-4 rounded-3 text-bg-dark mb-5" aria-labelledby="rodar-titulo">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+                <div>
+                    <h2 id="rodar-titulo" class="mb-2">¿Listo para rodar?</h2>
+                    <p class="mb-0">Elige tu bicicleta y prepara tu recorrido.</p>
+                </div>
+                <img src="../img/logo.svg" alt="" width="80" height="80" class="d-none d-md-block">
+                <a href="#consulta" class="d-inline-block bg-warning text-dark fw-semibold px-4 py-3 rounded-3 text-decoration-none">
+                    Consultar opciones
+                </a>
+            </div>
+        </section>
+
+        <!-- 15. COMPARACIÓN EN PROPORCIÓN 8/4 -->
+        <section class="row g-4 mb-5" aria-labelledby="tarifas-titulo">
+            <div class="col-12 col-lg-8">
+                <h2 id="tarifas-titulo">Compara opciones</h2>
+                <div class="overflow-auto">
+                    <table class="table">
+                        <caption>Duración y nivel de las propuestas</caption>
+                        <thead>
+                            <tr><th scope="col">Plan</th><th scope="col">Duración</th><th scope="col">Nivel</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row">Primer paseo urbano</th><td>1 hora</td><td>Suave</td></tr>
+                            <tr><th scope="row">Camino de grava</th><td>3 horas</td><td>Intermedio</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <aside class="col-12 col-lg-4">
+                <h2 class="fs-4">Elige a tu ritmo</h2>
+                <p>Compara duración y nivel antes de elegir una experiencia.</p>
+            </aside>
+        </section>
+
+        <!-- 16. FORMULARIO DE CONSULTA -->
+        <section id="consulta" class="row g-4" aria-labelledby="consulta-titulo">
+            <div class="col-12 col-md-8">
+                <h2 id="consulta-titulo">Consulta tus opciones</h2>
+                <form action="#consulta" method="get" class="d-flex flex-column gap-3">
+                    <div>
+                        <label for="plan" class="d-block fw-semibold">Tipo de salida</label>
+                        <select id="plan" name="plan" required class="w-100 p-2 border rounded">
+                            <option value="">Elige una opción</option>
+                            <option value="urbano">Paseo urbano</option>
+                            <option value="grava">Camino de grava</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="cantidad" class="d-block fw-semibold">Cantidad de bicicletas</label>
+                        <input id="cantidad" name="cantidad" type="number" min="1" max="6" step="1" required class="w-100 p-2 border rounded" aria-describedby="cantidad-ayuda">
+                        <p id="cantidad-ayuda" class="mb-0">Elige entre 1 y 6 bicicletas completas.</p>
+                    </div>
+                    <button type="submit" class="align-self-start p-2 border rounded bg-warning text-dark fw-semibold">
+                        Consultar opciones
+                    </button>
+                </form>
+            </div>
+            <aside class="col-12 col-md-4">
+                <h2 class="fs-4">Observa el resultado</h2>
+                <p>Prueba dejar una opción vacía o escribir una cantidad fuera del rango.</p>
+            </aside>
+        </section>
+
+    </main>
+
+    <!-- 13. PIE DE PÁGINA -->
+    <footer class="border-top py-4">
+        <div class="container d-flex flex-column flex-md-row justify-content-between gap-2 px-3">
+            <p class="mb-0">Rueda Libre — Ideas para rodar</p>
+            <a href="#contenido" class="text-decoration-none">Volver al contenido</a>
+        </div>
+    </footer>
+
+    <!-- CDN JS Bundle de Bootstrap 5.3.8 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

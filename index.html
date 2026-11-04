@@ -5,86 +5,261 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Alquiler de bicicletas y recorridos guiados por Medellín.">
   <title>Alquiler de bicicletas en el valle de aburra | Rueda Libre</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+  
+  <!-- 1. CDN CSS de Bootstrap 5.3.8 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  
+  <!-- 2. Hoja propia cargada DESPUÉS de Bootstrap para respetar la cascada -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <a class="salto" href="#contenido">Saltar al contenido</a>
-  <header class="encabezado">
-    <div class="contenedor barra">
-      <a class="marca" href="index.html"><img src="img/logo.svg" alt="" width="80" height="80"> Rueda Libre</a>
-      <nav aria-label="Navegación principal"><ul class="menu" id="menu"><li><a href="index.html" class="activo" aria-current="page">Inicio</a></li>
-<li><a href="paginas/tarifas.html">Tarifas y rutas</a></li>
-<li><a href="paginas/reservas.html">Reservas</a></li></ul></nav>
+
+  <a class="salto visually-hidden-focusable" href="#contenido">Saltar al contenido</a>
+
+  <!-- ENCABEZADO -->
+  <header class="bg-dark text-white py-3">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <a class="text-white fw-bold text-decoration-none d-flex align-items-center gap-2" href="index.html">
+        <img src="img/logo.svg" alt="" width="80" height="80"> Rueda Libre
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="d-flex flex-wrap justify-content-center gap-3 list-unstyled m-0">
+          <li><a href="index.html" class="text-white text-decoration-none fw-bold" aria-current="page">Inicio</a></li>
+          <li><a href="paginas/tarifas.html" class="text-white text-decoration-none">Tarifas y rutas</a></li>
+          <li><a href="paginas/reservas.html" class="text-white text-decoration-none">Reservas</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
-  <main id="contenido" class="contenedor">
-    <section class="portada" aria-labelledby="titulo">
-      <div><p class="texto-secundario">ALQUILER Y RECORRIDOS EN MEDELLÍN</p><h1 id="titulo">Rueda Libre</h1><p>Explora la ciudad a tu ritmo con bicicletas y recorridos guiados. <strong>Todos los alquileres incluyen casco y candado.</strong> Visita <a href="#encuentranos">nuestro punto de encuentro</a>.</p><a class="boton" href="paginas/reservas.html">Reservar ahora</a></div>
-      <img src="img/rio.jpg" alt="Ciclista circulando por una vía urbana" width="800" height="500">
+
+  <main id="contenido" class="container py-5">
+    
+    <!-- PORTADA EN DOS COLUMNAS -->
+    <section class="row g-4 align-items-center mb-5" aria-labelledby="titulo">
+      <div class="col-12 col-md-6">
+        <p class="text-success fw-semibold mb-1">ALQUILER Y RECORRIDOS EN MEDELLÍN</p>
+        <h1 id="titulo" class="display-4 fw-bold mb-3">Rueda Libre</h1>
+        <p class="lead mb-4">Explora la ciudad a tu ritmo con bicicletas y recorridos guiados. <strong>Todos los alquileres incluyen casco y candado.</strong> Visita <a href="#encuentranos" class="text-decoration-underline">nuestro punto de encuentro</a>.</p>
+        <a class="d-inline-block bg-warning text-dark fw-semibold px-4 py-3 rounded-3 text-decoration-none" href="paginas/reservas.html">Reservar ahora</a>
+      </div>
+      <div class="col-12 col-md-6">
+        <img src="img/rio.jpg" alt="Ciclista circulando por una vía urbana" class="img-fluid rounded-3 shadow-sm" width="800" height="500">
+      </div>
     </section>
-    <section aria-labelledby="quienes"><h2 id="quienes">Quiénes somos</h2><p>Somos un emprendimiento de Medellín que alquila bicicletas y organiza recorridos por la ciudad. Queremos que disfrutes el camino <em>sin afán</em>, con una opción adecuada para cada paseo.</p></section>
-    <section aria-labelledby="servicios-titulo"><h2 id="servicios-titulo">Nuestros servicios</h2><div class="servicios">
-      <article class="tarjeta"><h3>Alquiler de bicicletas</h3><p>Elige una bicicleta para una hora, medio día o el día completo.</p><a href="paginas/tarifas.html">Consultar precios de alquiler</a></article>
-      <article class="tarjeta"><h3>Recorridos guiados</h3><p>Conoce rutas urbanas acompañado por guías certificados.</p><a href="paginas/tarifas.html#recorridos">Consultar recorridos y precios</a></article>
-      <article class="tarjeta"><h3>Taller básico</h3><p>Consulta recomendaciones para revisar la bicicleta antes de salir.</p></article>
-    </div></section>
-    <!-- Referencia con CSS Grid. La práctica de Bootstrap se crea en un archivo nuevo dentro de pruebas/. -->
-    <section id="flota" aria-labelledby="flota-titulo"><h2 id="flota-titulo">Nuestra flota</h2><div class="flota">
-      <article class="tarjeta bici">
-        <img src="img/urbana.jpg" alt="Bicicleta urbana fotografiada en una calle" width="640" height="400" loading="lazy">
-        <h3>Urbana Clásica</h3><p>Cómoda y liviana para las ciclorrutas.</p><p class="precio">$10.000 / hora</p>
-        <a class="boton" href="paginas/reservas.html">Reservar Urbana Clásica</a>
-      </article>
-      <article class="tarjeta bici">
-        <img src="img/plegable.jpg" alt="Bicicleta plegable compacta fotografiada junto a una pared" width="640" height="400" loading="lazy">
-        <h3>Urbana Plegable</h3><p>Se dobla en segundos; ideal para combinar con el metro.</p><p class="precio">$12.000 / hora</p>
-        <a class="boton" href="paginas/reservas.html">Reservar Urbana Plegable</a>
-      </article>
-      <article class="tarjeta bici">
-        <img src="img/montana.jpg" alt="Ciclista en bicicleta de montaña por un sendero forestal" width="640" height="400" loading="lazy">
-        <h3>Montaña Trail</h3><p>Suspensión delantera y 21 cambios para las subidas.</p><p class="precio">$15.000 / hora</p>
-        <a class="boton" href="paginas/reservas.html">Reservar Montaña Trail</a>
-      </article>
-      <article class="tarjeta bici">
-        <img src="img/gravel.jpg" alt="Ciclista con equipo en bicicleta por un camino rural de grava" width="640" height="400" loading="lazy">
-        <h3>Gravel Aventura</h3><p>Para rutas mixtas de asfalto y destapado.</p><p class="precio">$18.000 / hora</p>
-        <a class="boton" href="paginas/reservas.html">Reservar Gravel Aventura</a>
-      </article>
-      <article class="tarjeta bici">
-        <img src="img/electrica.jpg" alt="Bicicleta eléctrica estacionada en un parque" width="640" height="400" loading="lazy">
-        <span class="nuevo">Nuevo</span><h3>Eléctrica Urbana</h3><p>Asistencia eléctrica con 45 km de autonomía.</p><p class="precio">$25.000 / hora</p>
-        <a class="boton" href="paginas/reservas.html">Reservar Eléctrica Urbana</a>
-      </article>
-      <article class="tarjeta bici">
-        <img src="img/infantil.jpg" alt="Niña montando una bicicleta infantil en un parque" width="640" height="400" loading="lazy">
-        <h3>Infantil</h3><p>Para niños de 6 a 10 años.</p><p class="precio">$8.000 / hora</p>
-        <a class="boton" href="paginas/reservas.html">Reservar Infantil</a>
-      </article>
-      <article class="tarjeta bici">
-        <img src="img/tandem.jpg" alt="Pareja montando una bicicleta tándem junto al mar" width="640" height="400" loading="lazy">
-        <h3>Tándem</h3><p>Para dos personas; perfecta para pasear en pareja.</p><p class="precio">$20.000 / hora</p>
-        <a class="boton" href="paginas/reservas.html">Reservar Tándem</a>
-      </article>
-    </div></section>
-    <section aria-labelledby="rutas-titulo"><h2 id="rutas-titulo">Nuestras rutas</h2><div class="rutas"><article class="tarjeta"><img src="img/rio.jpg" alt="Ciclista circulando por una vía urbana" width="800" height="500" loading="lazy"><h3>Río y Parques</h3><p>Nivel Fácil · 12 km · 2 h</p><a href="paginas/tarifas.html#recorridos">Ver tarifa de Río y Parques</a></article>
-<article class="tarjeta"><img src="img/barrio.jpg" alt="Bicicleta urbana turquesa estacionada junto a una pared de ladrillo" width="800" height="500" loading="lazy"><h3>Sabores de Barrio</h3><p>Nivel Medio · 18 km · 3 h</p><a href="paginas/tarifas.html#recorridos">Ver tarifa de Sabores de Barrio</a></article>
-<article class="tarjeta"><img src="img/palmas.jpg" alt="Ciclista recorriendo un sendero de montaña" width="800" height="500" loading="lazy"><h3>Reto Las Palmas</h3><p>Nivel Difícil · 25 km · 4 h</p><a href="paginas/tarifas.html#recorridos">Ver tarifa de Reto Las Palmas</a></article></div></section>
-    <section aria-labelledby="como"><h2 id="como">Cómo alquilar</h2><ol><li>Consulta la flota y las tarifas.</li><li>Elige una fecha y un plan.</li><li>Completa la solicitud de reserva.</li><li>Espera la confirmación del equipo antes de desplazarte.</li></ol><ul><li>Bicicletas revisadas en cada alquiler.</li><li>Casco y candado incluidos.</li><li>Guías certificados para los recorridos.</li></ul></section>
-    <section id="encuentranos"><h2>Encuéntranos</h2><p>Estamos en Medellín. Consulta el punto de encuentro con el equipo antes de salir.</p><a href="https://www.openstreetmap.org/#map=13/6.2442/-75.5812" target="_blank" rel="noopener noreferrer">Ver Medellín en el mapa</a><p><a href="mailto:hola@ruedalibre.example">Escribir a Rueda Libre</a></p></section>
+
+    <!-- QUIÉNES SOMOS -->
+    <section class="mb-5" aria-labelledby="quienes">
+      <h2 id="quienes" class="mb-3">Quiénes somos</h2>
+      <p class="lead">Somos un emprendimiento de Medellín que alquila bicicletas y organiza recorridos por la ciudad. Queremos que disfrutes el camino <em>sin afán</em>, con una opción adecuada para cada paseo.</p>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="mb-5" aria-labelledby="servicios-titulo">
+      <h2 id="servicios-titulo" class="mb-4">Nuestros servicios</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <article class="h-100 p-4 border rounded-3 d-flex flex-column gap-2">
+            <h3>Alquiler de bicicletas</h3>
+            <p>Elige una bicicleta para una hora, medio día o el día completo.</p>
+            <a href="paginas/tarifas.html" class="mt-auto align-self-start text-dark bg-warning p-2 rounded text-decoration-none fw-semibold">Consultar precios de alquiler</a>
+          </article>
+        </div>
+        <div class="col-12 col-md-4">
+          <article class="h-100 p-4 border rounded-3 d-flex flex-column gap-2">
+            <h3>Recorridos guiados</h3>
+            <p>Conoce rutas urbanas acompañado por guías certificados.</p>
+            <a href="paginas/tarifas.html#recorridos" class="mt-auto align-self-start text-dark bg-warning p-2 rounded text-decoration-none fw-semibold">Consultar recorridos y precios</a>
+          </article>
+        </div>
+        <div class="col-12 col-md-4">
+          <article class="h-100 p-4 border rounded-3 d-flex flex-column gap-2">
+            <h3>Taller básico</h3>
+            <p>Consulta recomendaciones para revisar la bicicleta antes de salir.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLOTA COMPLETA (GRILLA: 1 cel, 2 sm, 3 lg, 4 xl) -->
+    <section id="flota" class="mb-5" aria-labelledby="flota-titulo">
+      <h2 id="flota-titulo" class="mb-4">Nuestra flota</h2>
+      <div class="row g-4">
+        
+        <!-- Bici 1 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+          <article class="h-100 d-flex flex-column gap-2 p-3 border rounded-3">
+            <img src="img/urbana.jpg" alt="Bicicleta urbana fotografiada en una calle" class="img-fluid rounded" width="640" height="400" loading="lazy">
+            <h3 class="fs-5 mb-0">Urbana Clásica</h3>
+            <p class="mb-0">Cómoda y liviana para las ciclorrutas.</p>
+            <p class="fw-semibold text-success mb-0">$10.000 / hora</p>
+            <a class="mt-auto align-self-start text-dark bg-warning p-2 rounded text-decoration-none fw-semibold" href="paginas/reservas.html">Reservar Urbana Clásica</a>
+          </article>
+        </div>
+
+        <!-- Bici 2 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+          <article class="h-100 d-flex flex-column gap-2 p-3 border rounded-3">
+            <img src="img/plegable.jpg" alt="Bicicleta plegable compacta fotografiada junto a una pared" class="img-fluid rounded" width="640" height="400" loading="lazy">
+            <h3 class="fs-5 mb-0">Urbana Plegable</h3>
+            <p class="mb-0">Se dobla en segundos; ideal para combinar con el metro.</p>
+            <p class="fw-semibold text-success mb-0">$12.000 / hora</p>
+            <a class="mt-auto align-self-start text-dark bg-warning p-2 rounded text-decoration-none fw-semibold" href="paginas/reservas.html">Reservar Urbana Plegable</a>
+          </article>
+        </div>
+
+        <!-- Bici 3 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+          <article class="h-100 d-flex flex-column gap-2 p-3 border rounded-3">
+            <img src="img/montana.jpg" alt="Ciclista en bicicleta de montaña por un sendero forestal" class="img-fluid rounded" width="640" height="400" loading="lazy">
+            <h3 class="fs-5 mb-0">Montaña Trail</h3>
+            <p class="mb-0">Suspensión delantera y 21 cambios para las subidas.</p>
+            <p class="fw-semibold text-success mb-0">$15.000 / hora</p>
+            <a class="mt-auto align-self-start text-dark bg-warning p-2 rounded text-decoration-none fw-semibold" href="paginas/reservas.html">Reservar Montaña Trail</a>
+          </article>
+        </div>
+
+        <!-- Bici 4 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+          <article class="h-100 d-flex flex-column gap-2 p-3 border rounded-3">
+            <img src="img/gravel.jpg" alt="Ciclista con equipo en bicicleta por un camino rural de grava" class="img-fluid rounded" width="640" height="400" loading="lazy">
+            <h3 class="fs-5 mb-0">Gravel Aventura</h3>
+            <p class="mb-0">Para rutas mixtas de asfalto y destapado.</p>
+            <p class="fw-semibold text-success mb-0">$18.000 / hora</p>
+            <a class="mt-auto align-self-start text-dark bg-warning p-2 rounded text-decoration-none fw-semibold" href="paginas/reservas.html">Reservar Gravel Aventura</a>
+          </article>
+        </div>
+
+        <!-- Bici 5 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+          <article class="h-100 d-flex flex-column gap-2 p-3 border rounded-3 position-relative">
+            <span class="badge bg-primary position-absolute top-0 end-0 m-3">Nuevo</span>
+            <img src="img/electrica.jpg" alt="Bicicleta eléctrica estacionada en un parque" class="img-fluid rounded" width="640" height="400" loading="lazy">
+            <h3 class="fs-5 mb-0">Eléctrica Urbana</h3>
+            <p class="mb-0">Asistencia eléctrica con 45 km de autonomía.</p>
+            <p class="fw-semibold text-success mb-0">$25.000 / hora</p>
+            <a class="mt-auto align-self-start text-dark bg-warning p-2 rounded text-decoration-none fw-semibold" href="paginas/reservas.html">Reservar Eléctrica Urbana</a>
+          </article>
+        </div>
+
+        <!-- Bici 6 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+          <article class="h-100 d-flex flex-column gap-2 p-3 border rounded-3">
+            <img src="img/infantil.jpg" alt="Niña montando una bicicleta infantil en un parque" class="img-fluid rounded" width="640" height="400" loading="lazy">
+            <h3 class="fs-5 mb-0">Infantil</h3>
+            <p class="mb-0">Para niños de 6 a 10 años.</p>
+            <p class="fw-semibold text-success mb-0">$8.000 / hora</p>
+            <a class="mt-auto align-self-start text-dark bg-warning p-2 rounded text-decoration-none fw-semibold" href="paginas/reservas.html">Reservar Infantil</a>
+          </article>
+        </div>
+
+        <!-- Bici 7 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+          <article class="h-100 d-flex flex-column gap-2 p-3 border rounded-3">
+            <img src="img/tandem.jpg" alt="Pareja montando una bicicleta tándem junto al mar" class="img-fluid rounded" width="640" height="400" loading="lazy">
+            <h3 class="fs-5 mb-0">Tándem</h3>
+            <p class="mb-0">Para dos personas; perfecta para pasear en pareja.</p>
+            <p class="fw-semibold text-success mb-0">$20.000 / hora</p>
+            <a class="mt-auto align-self-start text-dark bg-warning p-2 rounded text-decoration-none fw-semibold" href="paginas/reservas.html">Reservar Tándem</a>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RUTAS -->
+    <section class="mb-5" aria-labelledby="rutas-titulo">
+      <h2 id="rutas-titulo" class="mb-4">Nuestras rutas</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <article class="h-100 d-flex flex-column gap-2 p-3 border rounded-3">
+            <img src="img/rio.jpg" alt="Ciclista circulando por una vía urbana" class="img-fluid rounded" width="800" height="500" loading="lazy">
+            <h3 class="fs-5 mb-0">Río y Parques</h3>
+            <p class="mb-0">Nivel Fácil · 12 km · 2 h</p>
+            <a class="mt-auto align-self-start text-dark bg-warning p-2 rounded text-decoration-none fw-semibold" href="paginas/tarifas.html#recorridos">Ver tarifa de Río y Parques</a>
+          </article>
+        </div>
+        <div class="col-12 col-md-4">
+          <article class="h-100 d-flex flex-column gap-2 p-3 border rounded-3">
+            <img src="img/barrio.jpg" alt="Bicicleta urbana turquesa estacionada junto a una pared de ladrillo" class="img-fluid rounded" width="800" height="500" loading="lazy">
+            <h3 class="fs-5 mb-0">Sabores de Barrio</h3>
+            <p class="mb-0">Nivel Medio · 18 km · 3 h</p>
+            <a class="mt-auto align-self-start text-dark bg-warning p-2 rounded text-decoration-none fw-semibold" href="paginas/tarifas.html#recorridos">Ver tarifa de Sabores de Barrio</a>
+          </article>
+        </div>
+        <div class="col-12 col-md-4">
+          <article class="h-100 d-flex flex-column gap-2 p-3 border rounded-3">
+            <img src="img/palmas.jpg" alt="Ciclista recorriendo un sendero de montaña" class="img-fluid rounded" width="800" height="500" loading="lazy">
+            <h3 class="fs-5 mb-0">Reto Las Palmas</h3>
+            <p class="mb-0">Nivel Difícil · 25 km · 4 h</p>
+            <a class="mt-auto align-self-start text-dark bg-warning p-2 rounded text-decoration-none fw-semibold" href="paginas/tarifas.html#recorridos">Ver tarifa de Reto Las Palmas</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO ALQUILAR -->
+    <section class="mb-5" aria-labelledby="como">
+      <h2 id="como" class="mb-3">Cómo alquilar</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6">
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item border-0 bg-transparent ps-0">Consulta la flota y las tarifas.</li>
+            <li class="list-group-item border-0 bg-transparent ps-0">Elige una fecha y un plan.</li>
+            <li class="list-group-item border-0 bg-transparent ps-0">Completa la solicitud de reserva.</li>
+            <li class="list-group-item border-0 bg-transparent ps-0">Espera la confirmación del equipo antes de desplazarte.</li>
+          </ol>
+        </div>
+        <div class="col-12 col-md-6">
+          <ul class="list-group">
+            <li class="list-group-item border-0 bg-transparent ps-0">✔ Bicicletas revisadas en cada alquiler.</li>
+            <li class="list-group-item border-0 bg-transparent ps-0">✔ Casco y candado incluidos.</li>
+            <li class="list-group-item border-0 bg-transparent ps-0">✔ Guías certificados para los recorridos.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENCUÉNTRANOS -->
+    <section id="encuentranos" class="mb-5 p-4 rounded-3 bg-light border">
+      <h2 class="mb-3">Encuéntranos</h2>
+      <p>Estamos en Medellín. Consulta el punto de encuentro con el equipo antes de salir.</p>
+      <div class="d-flex flex-wrap gap-3 align-items-center">
+        <a class="btn btn-outline-dark" href="https://www.openstreetmap.org/#map=13/6.2442/-75.5812" target="_blank" rel="noopener noreferrer">Ver Medellín en el mapa</a>
+        <a class="btn btn-warning text-dark fw-semibold" href="mailto:hola@ruedalibre.example">Escribir a Rueda Libre</a>
+      </div>
+    </section>
+
   </main>
-  <footer class="pie">
-    <div class="contenedor pie-bloques">
-      <div><h2>Rueda Libre</h2><p><a href="guia/">Guía de práctica con Bootstrap</a></p><p>Medellín sobre dos ruedas.<br>Proyecto educativo · 2026</p></div>
-      <div><h2>Contacto</h2><a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a><p>Medellín, Colombia</p></div>
-      <div><h2>Horario</h2><p>Lunes a viernes: 7 a. m. a 7 p. m.<br>Fines de semana y festivos: 6 a. m. a 2 p. m.</p></div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <h2 class="fs-4 text-white mb-2">Rueda Libre</h2>
+          <p class="mb-1"><a href="guia/" class="text-white text-decoration-underline">Guía de práctica con Bootstrap</a></p>
+          <p class="text-secondary small mb-0">Medellín sobre dos ruedas.<br>Proyecto educativo · 2026</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h2 class="fs-4 text-white mb-2">Contacto</h2>
+          <p class="mb-1"><a href="mailto:hola@ruedalibre.example" class="text-white text-decoration-none">hola@ruedalibre.example</a></p>
+          <p class="text-secondary small mb-0">Medellín, Colombia</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h2 class="fs-4 text-white mb-2">Horario</h2>
+          <p class="text-secondary small mb-0">Lunes a viernes: 7 a. m. a 7 p. m.<br>Fines de semana y festivos: 6 a. m. a 2 p. m.</p>
+        </div>
+      </div>
     </div>
   </footer>
-  <a class="boton whatsapp" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+
+  <a class="boton whatsapp position-fixed bottom-0 end-0 m-4 btn btn-success rounded-circle p-3 shadow" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp</a>
+
+  <!-- CDN JS Bundle de Bootstrap 5.3.8 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
